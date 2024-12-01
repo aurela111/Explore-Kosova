@@ -1,0 +1,2 @@
+# Explore-Kosova
+Faza Pare
