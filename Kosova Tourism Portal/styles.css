@@ -1,418 +1,558 @@
 /* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1e3d58; 
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3d58;
+  padding: 1rem 2rem;
 }
 
 .navbar .logo {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .nav-links a:hover {
-    color: #f5a623; 
+  color: #f5a623;
 }
 
 /* Search Bar Styles */
 .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .search-bar input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
 }
 
 .search-bar button {
-    padding: 0.5rem 1rem;
-    background-color: #f5a623;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #f5a623;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .search-bar button:hover {
-    background-color: #e69123;
+  background-color: #e69123;
 }
-
 
 /* Welcome Section Styling for Both Homepage and Explore Kosovo */
 .welcome-section {
-    background-image: url('images/kosovo-landscape.jpg'); 
-    background-size: cover;   
-    background-position: center;  
-    background-repeat: no-repeat; 
-    height: 500px;  
-    color: white;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  background-image: url("images/kosovo-landscape.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.welcome-section h1, .welcome-section-explore h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.welcome-section h1,
+.welcome-section-explore h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-.welcome-section .btn, .welcome-section-explore .btn {
-    padding: 10px 20px;
-    background-color: #008CBA;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.welcome-section .btn,
+.welcome-section-explore .btn {
+  padding: 10px 20px;
+  background-color: #008cba;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.welcome-section .btn:hover, .welcome-section-explore .btn:hover {
-    background-color: #005f73;
+.welcome-section .btn:hover,
+.welcome-section-explore .btn:hover {
+  background-color: #005f73;
 }
-
 
 /* Places Section Styles */
 .places-section {
-    padding: 5rem 2rem;
-    background-color: #f4f4f4;
+  padding: 5rem 2rem;
+  background-color: #f4f4f4;
 }
 
 .places-container h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .places-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .place-item img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .place-item img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .place-item h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #1e3d58; 
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+  background-color: #1e3d58;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
 }
-
-
 
 /* Explore Overview Styles */
 .explore-overview {
-    padding: 5rem 2rem;
-    background-color: #f5f5f5;
-    text-align: center;
+  padding: 5rem 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .explore-overview h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Tourist Attractions Section */
 .tourist-attractions {
-    padding: 5rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .attractions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .attraction-item img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .attraction-item img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .attraction-item h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 /* Cultural Insights Section */
 .cultural-insights .culture-image {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cultural-insights .culture-image img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .cultural-insights p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .cultural-insights .culture-image p {
-    text-align: center;
-    font-style: italic;
-    margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
 }
-
-
 
 /* Login Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
 }
 
 .navbar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .navbar ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 .navbar ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Login Section */
 .login-section {
-    padding: 2rem;
-    text-align: center;
-    background-color: #fff;
-    max-width: 600px;
-    margin: 5rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 label {
-    font-size: 1rem;
-    display: block;
+  font-size: 1rem;
+  display: block;
 }
 
-input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button[type="submit"] {
-    background-color: #f5a623;
-    padding: 1rem 3rem;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #f5a623;
+  padding: 1rem 3rem;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button[type="submit"]:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 .error-message {
-    color: red;
-    font-size: 0.9rem;
+  color: red;
+  font-size: 0.9rem;
 }
 
 p {
-    margin-top: 1rem;
-    font-size: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
-
-
 
 /* News Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
 }
 
 .navbar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .navbar ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 .navbar ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* News Section */
 .news-section {
-    padding: 2rem;
-    text-align: center;
-    background-color: #fff;
-    max-width: 1200px;
-    margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 5rem auto;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .news-article {
-    display: flex;
-    margin-bottom: 2rem;
-    background-color: #f8f8f8;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .news-image {
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-    margin-right: 1.5rem;
-    border-radius: 8px;
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 8px;
 }
 
 .news-content {
-    flex: 1;
+  flex: 1;
 }
 
 .news-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .news-content p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .read-more {
-    color: #f5a623;
-    font-weight: bold;
-    text-decoration: none;
+  color: #f5a623;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .read-more:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 footer p {
-    font-size: 1rem;
-    margin: 0;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*ContactUs section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3d58;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: #f5a623;
+}
+
+/* Contact Us Form Section */
+.contact-section {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+nav-links a:hover {
+  color: #f5a623;
+}
+
+/* Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="subject"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+.btn {
+  background-color: #f5a623;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #e69123;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
 }
