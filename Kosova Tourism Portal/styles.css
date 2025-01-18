@@ -200,6 +200,7 @@ footer {
   margin-top: 1rem;
 }
 
+
 /* Login Styles */
 body {
   font-family: Arial, sans-serif;
@@ -265,8 +266,7 @@ label {
   display: block;
 }
 
-input[type="email"],
-input[type="password"] {
+input[type="email"], input[type="password"] {
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
@@ -304,6 +304,79 @@ footer {
   color: white;
   padding: 2rem 0;
   text-align: center;
+}
+
+/* Register Section */
+.register-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.register-section .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.register-section label {
+  font-size: 1rem;
+  display: block;
+}
+
+.register-section input[type="text"],
+.register-section input[type="email"],
+.register-section input[type="password"],
+.register-section select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-section button[type="submit"] {
+  background-color: #f5a623;
+  padding: 1rem 3rem;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-section button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/*dashboard */
+.dashboard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.admin-actions .btn, .user-actions .btn {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #f5a623;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-actions .btn:hover, .user-actions .btn:hover {
+  background-color: #333;
 }
 
 /* News Styles */
