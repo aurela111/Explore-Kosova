@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Explore Kosova</div>
+            <ul class="nav-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="login.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- User Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <h1>Welcome, <span class="username">User</span>!</h1>
+            <p>Choose an action to get started:</p>
+
+            <div class="user-actions">
+                <a href="explore_destinations.php"><button class="btn">Explore Destinations</button></a>
+                <a href="news.php"><button class="btn">View News</button></a>
+                <a href="contactus.php"><button class="btn">Contact Support</button></a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search destinations, news, or support...">
+                <button class="search-btn">Search</button>
+            </div>
+            
+            <button class="btn" onclick="location.href='tour_packages.php'">Explore Destinations</button>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Explore Kosova. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

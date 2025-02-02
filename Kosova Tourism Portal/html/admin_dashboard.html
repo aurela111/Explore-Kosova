@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,20 +12,20 @@
             <div class="logo">Explore Kosova</div>
             <ul class="nav-links">
                 <li><a href="Homepage.html">Home</a></li>
-                <li><a href="login.html">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="dashboard">
         <div class="container">
-            <h1>Welcome, User!</h1>
-            <p>This is your dashboard where you can explore personalized content and updates.</p>
+            <h1>Welcome, Admin!</h1>
+            <p>This is the admin dashboard where you can manage users, content, and system settings.</p>
 
-            <div class="user-actions">
-                <button class="btn">Explore Destinations</button>
-                <button class="btn">View News</button>
-                <button class="btn">Contact Support</button>
+            <div class="admin-actions">
+                <button class="btn" onclick="window.location.href='manage_users.php'">Manage Users</button>
+                <button class="btn" onclick="window.location.href='view_reports.php'">View Reports</button>
+                <button class="btn" onclick="window.location.href='system_settings.php'">System Settings</button>
             </div>
         </div>
     </section>

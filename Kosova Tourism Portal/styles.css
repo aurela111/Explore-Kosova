@@ -358,26 +358,154 @@ footer {
   background-color: #333;
 }
 
-/*dashboard */
+/* Dashboard Section */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #1e3d58;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #333;
+}
+
+.logout-btn {
+  background: #f5a623;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #333;
+}
+
+/* Dashboard Section */
 .dashboard {
   padding: 2rem;
   text-align: center;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.admin-actions .btn, .user-actions .btn {
+.dashboard h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.dashboard p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.username {
+  color: #f5a623;
+  font-weight: bold;
+}
+
+/* Buttons */
+.user-actions .btn {
   margin: 1rem;
   padding: 1rem 2rem;
   font-size: 1rem;
   color: white;
-  background-color: #f5a623;
+  background: linear-gradient(90deg, #4a90e2, #f5a623);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.admin-actions .btn:hover, .user-actions .btn:hover {
+.user-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar */
+.search-bar {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-input {
+  width: 60%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
   background-color: #333;
 }
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
 
 /* News Styles */
 body {
@@ -486,24 +614,39 @@ footer p {
   margin: 0;
 }
 
-/*ContactUs section */
+/* Contactus Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #1e3d58;
+  color: white;
+  padding: 1rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e3d58;
   padding: 1rem 2rem;
 }
 
 .navbar .logo {
-  color: white;
   font-size: 2rem;
   font-weight: bold;
+  color: white;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
@@ -520,116 +663,91 @@ footer p {
   color: #f5a623;
 }
 
-/* Contact Us Form Section */
+/* Contact Section */
 .contact-section {
-  padding: 5rem 2rem;
-  background-color: #f9f9f9;
-}
-nav-links a:hover {
-  color: #f5a623;
-}
-
-/* Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-}
-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-}
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-.contact-section .container {
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 2rem 2rem 4rem 2rem;
   background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: center;
 }
 
-.contact-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
+.contact-header {
   margin-bottom: 2rem;
 }
 
+.contact-header h2 {
+  font-size: 2.5rem;
+  color: #1e3d58;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .form-group {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  font-size: 1rem;
-  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="subject"],
 textarea {
-  width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
-  margin-top: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 100%;
 }
 
 textarea {
-  resize: vertical;
-  height: 200px;
+  resize: none;
+  height: 150px;
 }
 
 .btn {
-  background-color: #f5a623;
-  padding: 1rem 2rem;
+  background-color: #1e3d58;
   color: white;
-  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
-  text-align: center;
-  display: block;
-  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e69123;
+  background-color: #163144;
 }
 
+/* Footer */
 footer {
-  background-color: #333;
+  background-color: #1e3d58;
   color: white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
 }
 
+
+
+/*readmore */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -671,7 +789,7 @@ body {
 .nav-links a:hover {
   color: #f5a623;
 }
-/* Hero Section */
+/* Picture Section */
 .picture {
   background-image: url("images/landscape.png");
   background-size: cover;
@@ -780,4 +898,56 @@ body {
 
 .back-link:active .arrow {
   color: white;
+}
+
+/* tour packages */
+.tour-packages {
+  padding: 20px;
+  text-align: center;
+}
+
+.tour-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tour-package {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tour-package img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.tour-package h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.tour-package p {
+  font-size: 16px;
+  color: #666;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
