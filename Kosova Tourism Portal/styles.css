@@ -447,7 +447,6 @@ header {
 /* Buttons */
 
 .admin-actions .btn,
-
 .user-actions .btn {
   margin: 1rem;
   padding: 1rem 2rem;
@@ -495,7 +494,7 @@ header {
   transition: background-color 0.3s;
 }
 
-.search-btn:hover 
+.search-btn:hover,
 .admin-actions .btn:hover,
 .user-actions .btn:hover {
 

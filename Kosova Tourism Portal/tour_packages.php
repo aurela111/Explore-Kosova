@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include 'databaseconnect.php';
 
 $sql = "SELECT package_name, description, price, duration, image_url FROM tour_packages";
 $result = mysqli_query($conn, $sql);

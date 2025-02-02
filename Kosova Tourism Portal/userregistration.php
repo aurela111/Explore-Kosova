@@ -1,5 +1,5 @@
 <?php
-include 'database_connection.php';
+include 'databaseconnection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
