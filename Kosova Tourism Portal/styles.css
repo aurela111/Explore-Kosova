@@ -426,7 +426,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-<<<<<<< HEAD
+
 .dashboard h1 {
   font-size: 2.5rem;
   color: #333;
@@ -445,9 +445,9 @@ header {
 }
 
 /* Buttons */
-=======
+
 .admin-actions .btn,
->>>>>>> 94119702e065439c258e832fd27b73ca4296d9c5
+
 .user-actions .btn {
   margin: 1rem;
   padding: 1rem 2rem;
@@ -460,7 +460,7 @@ header {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-<<<<<<< HEAD
+
 .user-actions .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -495,11 +495,10 @@ header {
   transition: background-color 0.3s;
 }
 
-.search-btn:hover {
-=======
+.search-btn:hover 
 .admin-actions .btn:hover,
 .user-actions .btn:hover {
->>>>>>> 94119702e065439c258e832fd27b73ca4296d9c5
+
   background-color: #333;
 }
 
@@ -798,11 +797,9 @@ body {
 .nav-links a:hover {
   color: #f5a623;
 }
-<<<<<<< HEAD
-/* Picture Section */
-=======
 
->>>>>>> 94119702e065439c258e832fd27b73ca4296d9c5
+/* Picture Section */
+
 .picture {
   background-image: url("images/landscape.png");
   background-size: cover;
@@ -913,7 +910,7 @@ body {
   color: white;
 }
 
-<<<<<<< HEAD
+
 /* tour packages */
 .tour-packages {
   padding: 20px;
@@ -964,7 +961,7 @@ body {
 
 .btn:hover {
   background-color: #0056b3;
-=======
+}
 /* About Us */
 /* Full Page Slider */
 .slider {
@@ -1066,5 +1063,5 @@ body {
     font-size: 1.5rem;
     padding: 5px;
   }
->>>>>>> 94119702e065439c258e832fd27b73ca4296d9c5
+
 }
