@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Kosova Tourism Portal/js/script.js
+
 function validateForm() {
   // Reset error messages
   document.getElementById("emailError").textContent = "";
@@ -27,7 +27,7 @@ function validateForm() {
 
   return valid;
 }
-=======
+
 function validateForm() {
   // Reset error messages
   document.getElementById("emailError").textContent = "";
@@ -82,4 +82,4 @@ function changeSlide(n) {
   slideIndex += n - 1;
   showSlides();
 }
->>>>>>> 94119702e065439c258e832fd27b73ca4296d9c5:Kosova Tourism Portal/script.js
+
