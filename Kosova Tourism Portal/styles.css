@@ -200,7 +200,6 @@ footer {
   margin-top: 1rem;
 }
 
-
 /* Login Styles */
 body {
   font-family: Arial, sans-serif;
@@ -266,7 +265,8 @@ label {
   display: block;
 }
 
-input[type="email"], input[type="password"] {
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
@@ -364,7 +364,8 @@ footer {
   text-align: center;
 }
 
-.admin-actions .btn, .user-actions .btn {
+.admin-actions .btn,
+.user-actions .btn {
   margin: 1rem;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -375,7 +376,8 @@ footer {
   cursor: pointer;
 }
 
-.admin-actions .btn:hover, .user-actions .btn:hover {
+.admin-actions .btn:hover,
+.user-actions .btn:hover {
   background-color: #333;
 }
 
@@ -671,7 +673,7 @@ body {
 .nav-links a:hover {
   color: #f5a623;
 }
-/* Hero Section */
+
 .picture {
   background-image: url("images/landscape.png");
   background-size: cover;
@@ -780,4 +782,107 @@ body {
 
 .back-link:active .arrow {
   color: white;
+}
+
+/* About Us */
+/* Full Page Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Images for Each Slide */
+.slide:nth-child(1) {
+  background: url("images/mali.png") no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+  background: url("images/Brezovica.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+  background: url("images/Prizren1.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(4) {
+  background: url("images/Pejaa.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(5) {
+  background: url("images/1234.jpg") no-repeat center center/cover;
+}
+
+/* Slide Content */
+.slide-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.slide-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+  font-size: 1.5rem;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 1.2rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
 }
