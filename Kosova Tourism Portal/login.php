@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Include database connection
-include 'databaseconection.php';
+include 'C:\xampp\htdocs\Projektiii\Explore-Kosova\Kosova Tourism Portal\databaseconnection.php';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -7,7 +7,7 @@ if ($_SESSION['role'] !== 'admin') {
     exit;
 }
 
-include 'databaseconnection.php'; // Include your database connection file
+include 'C:\xampp\htdocs\Projektiii\Explore-Kosova\Kosova Tourism Portal\databaseconnection.php'; // Include your database connection file
 
 // Fetch all users
 $sql = "SELECT * FROM users";

@@ -1,5 +1,5 @@
 <?php
-include 'databaseconnection.php';
+include 'C:\xampp\htdocs\Projektiii\Explore-Kosova\Kosova Tourism Portal\databaseconnection.php';
 
 $news_id = isset($_GET['id']) ? (int)$_GET['id'] : 1;
 
