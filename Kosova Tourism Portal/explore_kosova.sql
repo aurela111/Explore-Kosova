@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2025 at 09:28 PM
+-- Generation Time: Feb 12, 2025 at 07:05 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `explore_kosova`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `username`, `email`, `password`) VALUES
+(1, 'Laleta', 'areta123.admin@gmail.com', '$2y$10$kf/4kCdzpqMYTq3PGiIcG.z58ZMZWvCOF5m2jL/2Gm30CIkk5NelC');
 
 -- --------------------------------------------------------
 
@@ -58,16 +78,16 @@ CREATE TABLE `destinations` (
 --
 
 INSERT INTO `destinations` (`id`, `name`, `description`, `image_url`, `location`, `opening_hours`, `contact_info`, `price`) VALUES
-(1, 'Gjakova', 'Gjakova is known for its traditional houses, and the Old Bazaar, a rich historical site.', 'images/gjakova.jpg', 'Gjakova, Kosovo', '09:00 - 18:00', 'info@gjakova.com', 50.00),
-(2, 'Prizren', 'Prizren is a city with many medieval monuments and an Ottoman heritage.', 'images/prizren.jpg', 'Prizren, Kosovo', '09:00 - 19:00', 'info@prizren.com', 60.00),
-(3, 'Pristina', 'Pristina, the capital city, is a vibrant mix of modern culture and history.', 'images/prishtina.jpg', 'Pristina, Kosovo', '08:00 - 22:00', 'info@pristina.com', 70.00),
-(4, 'Peja', 'Peja is famous for its picturesque surroundings and the Patriarchate of Peć.', 'images/peja.jpg', 'Peja, Kosovo', '09:00 - 20:00', 'info@peja.com', 65.00),
-(5, 'Mitrovica', 'Mitrovica is a historical city, rich in culture, with a divided history between North and South.', 'images/mitrovica.jpg', 'Mitrovica, Kosovo', '10:00 - 18:00', 'info@mitrovica.com', 55.00),
+(1, 'Gjakova', 'Gjakova is known for its traditional houses, and the Old Bazaar, a rich historical site.', 'gjakova.jpg', 'Gjakova, Kosovo', '09:00 - 18:00', 'info@gjakova.com', 50.00),
+(2, 'Prizren', 'Prizren is a city with many medieval monuments and an Ottoman heritage.', 'prizren.jpg', 'Prizren, Kosovo', '09:00 - 19:00', 'info@prizren.com', 60.00),
+(3, 'Pristina', 'Pristina, the capital city, is a vibrant mix of modern culture and history.', 'pristina.jpg', 'Pristina, Kosovo', '08:00 - 22:00', 'info@pristina.com', 70.00),
+(4, 'Peja', 'Peja is famous for its picturesque surroundings and the Patriarchate of Peć.', 'peja.jpg', 'Peja, Kosovo', '09:00 - 20:00', 'info@peja.com', 65.00),
+(5, 'Mitrovica', 'Mitrovica is a historical city, rich in culture, with a divided history between North and South.', 'mitrovica.jpg', 'Mitrovica, Kosovo', '10:00 - 18:00', 'info@mitrovica.com', 55.00),
 (6, 'Rugova Canyon', 'A scenic natural landmark, known for its breathtaking landscapes.', 'rugova.jpg', 'Rugova Canyon, Kosovo', 'All Day', 'info@rugova.com', 40.00),
 (7, 'Kosovo Museum', 'A museum showcasing the history and culture of Kosovo.', 'kosovomuseum.jpg', 'Pristina, Kosovo', '09:00 - 18:00', 'info@kosovomuseum.com', 30.00),
 (8, 'Brezovica Ski Resort', 'A popular ski resort for winter sports lovers.', 'brezovica.jpg', 'Brezovica, Kosovo', '08:00 - 17:00', 'info@brezovica.com', 80.00),
 (9, 'Mirusha Waterfalls', 'A natural wonder, these waterfalls are one of Kosovo’s best-kept secrets.', 'mirusha.jpg', 'Mirusha, Kosovo', 'All Day', 'info@mirusha.com', 50.00),
-(10, 'Germia Park', 'A large park with a pool, walking trails, and beautiful views of Pristina.', 'images/germia.jpg', 'Pristina, Kosovo', '06:00 - 20:00', 'info@germia.com', 25.00),
+(10, 'Germia Park', 'A large park with a pool, walking trails, and beautiful views of Pristina.', 'germia.jpg', 'Pristina, Kosovo', '06:00 - 20:00', 'info@germia.com', 25.00),
 (11, 'Visoki Decani', 'A UNESCO World Heritage site, home to a Serbian Orthodox monastery.', 'decani.jpg', 'Deçan, Kosovo', '08:00 - 16:00', 'info@decani.com', 45.00),
 (12, 'Kosovo Polje', 'A historic site, the battlefield of Kosovo, where the famous 1389 battle occurred.', 'kosovopolje.jpg', 'Kosovo Polje, Kosovo', '08:00 - 17:00', 'info@kosovopolje.com', 35.00),
 (13, 'Sharr Mountains National Park', 'A UNESCO-listed park with amazing biodiversity.', 'sharr.jpg', 'Sharr Mountains, Kosovo', '09:00 - 20:00', 'info@sharr.com', 75.00),
@@ -78,7 +98,7 @@ INSERT INTO `destinations` (`id`, `name`, `description`, `image_url`, `location`
 (18, 'Drenica Valley', 'A scenic valley filled with history, nature, and rural charm.', 'drenica.jpg', 'Drenica, Kosovo', '09:00 - 20:00', 'info@drenica.com', 50.00),
 (19, 'Sinan Pasha Mosque', 'A historical mosque in Prizren with architectural significance.', 'sinanpasha.jpg', 'Prizren, Kosovo', '09:00 - 17:00', 'info@sinanpasha.com', 40.00),
 (20, 'Vushtrri', 'A town with a rich Ottoman heritage, located near Pristina.', 'vushtrri.jpg', 'Vushtrri, Kosovo', '08:00 - 18:00', 'info@vushtrri.com', 30.00),
-(21, 'Newborn Monument', 'A symbol of Kosovo’s independence, located in Pristina.', 'images/newborn.jpg', 'Pristina, Kosovo', 'All Day', 'info@newborn.com', 20.00);
+(21, 'Newborn Monument', 'A symbol of Kosovo’s independence, located in Pristina.', 'newborn.jpg', 'Pristina, Kosovo', 'All Day', 'info@newborn.com', 20.00);
 
 -- --------------------------------------------------------
 
@@ -169,56 +189,56 @@ CREATE TABLE `tour_packages` (
 --
 
 INSERT INTO `tour_packages` (`id`, `guide_id`, `package_name`, `description`, `price`, `duration`, `image_url`) VALUES
-(1, 1, 'Kosovo Heritage Tour', 'Explore Kosovo\'s rich heritage and cultural landmarks.', 100.00, '5 hours', 'images/1.jpg'),
-(2, 1, 'Pristina City Tour', 'A walking tour through the heart of Pristina, Kosovo\'s capital.', 50.00, '3 hours', 'images/2.jpg'),
-(3, 1, 'Nature and History Expedition', 'A combination of nature and historical sites in Kosovo.', 120.00, '7 hours', 'images/3.jpg'),
-(4, 1, 'Kosovo Foodie Experience', 'A tour focused on Kosovo\'s traditional food and drinks.', 80.00, '4 hours', 'images/4.jpg'),
-(5, 1, 'Cultural Immersion in Kosovo Villages', 'Experience the rural beauty and traditions of Kosovo villages.', 90.00, '6 hours', 'images/5.jpg'),
+(1, 1, 'Kosovo Heritage Tour', 'Explore Kosovo\'s rich heritage and cultural landmarks.', 100.00, '5 hours', 'images/kosovo_heritage.jpg'),
+(2, 1, 'Pristina City Tour', 'A walking tour through the heart of Pristina, Kosovo\'s capital.', 50.00, '3 hours', 'images/pristina_city_tour.jpg'),
+(3, 1, 'Nature and History Expedition', 'A combination of nature and historical sites in Kosovo.', 120.00, '7 hours', 'images/nature_history_expedition.jpg'),
+(4, 1, 'Kosovo Foodie Experience', 'A tour focused on Kosovo\'s traditional food and drinks.', 80.00, '4 hours', 'images/kosovo_foodie_experience.jpg'),
+(5, 1, 'Cultural Immersion in Kosovo Villages', 'Experience the rural beauty and traditions of Kosovo villages.', 90.00, '6 hours', 'images/cultural_immersion_villages.jpg'),
 (6, 2, 'Cultural Insights Tour', 'Dive deep into Kosovo’s cultural history and monuments.', 95.00, '5 hours', 'images/cultural_insights.jpg'),
 (7, 2, 'Old Town Walks', 'Guided walk through the charming old towns of Kosovo.', 55.00, '3 hours', 'images/old_town_walks.jpg'),
-(8, 2, 'Nature and Adventure Tour', 'Enjoy Kosovo’s stunning natural beauty with a local guide.', 110.00, '6 hours', 'images/6.jpg'),
-(9, 2, 'Folklore and Traditions Tour', 'Experience Kosovo’s folklore and traditional music.', 70.00, '4 hours', 'images/7.jpg'),
-(10, 2, 'Kosovo History Tour', 'Learn about the fascinating history of Kosovo through its landmarks.', 100.00, '5 hours', 'images/8.jpg'),
-(11, 3, 'Kosovo History and Nature Tour', 'A tour combining history and natural landscapes of Kosovo.', 120.00, '7 hours', 'images/9.jpg'),
-(12, 3, 'Ancient Sites Tour', 'Visit Kosovo’s ancient archaeological sites with a local guide.', 95.00, '5 hours', 'images/10.jpg'),
-(13, 3, 'Hiking and Trekking in Kosovo', 'Explore Kosovo’s rugged mountains with a professional guide.', 150.00, '8 hours', 'images/11.jpg'),
-(14, 3, 'Nature and Culture Tour', 'Experience Kosovo’s cultural heritage and breathtaking nature.', 100.00, '6 hours', 'images/12.jpg'),
-(15, 3, 'Monumental Kosovo', 'A guided tour to the monumental and cultural sites of Kosovo.', 110.00, '5 hours', 'images/13.jpg'),
-(16, 4, 'Kosovo Medieval Tour', 'Travel back in time to the medieval period with this tour of Kosovo.', 115.00, '6 hours', 'images/14.jpg'),
+(8, 2, 'Nature and Adventure Tour', 'Enjoy Kosovo’s stunning natural beauty with a local guide.', 110.00, '6 hours', 'images/nature_adventure_tour.jpg'),
+(9, 2, 'Folklore and Traditions Tour', 'Experience Kosovo’s folklore and traditional music.', 70.00, '4 hours', 'images/folklore_traditions_tour.jpg'),
+(10, 2, 'Kosovo History Tour', 'Learn about the fascinating history of Kosovo through its landmarks.', 100.00, '5 hours', 'images/kosovo_history_tour.jpg'),
+(11, 3, 'Kosovo History and Nature Tour', 'A tour combining history and natural landscapes of Kosovo.', 120.00, '7 hours', 'images/history_nature_tour.jpg'),
+(12, 3, 'Ancient Sites Tour', 'Visit Kosovo’s ancient archaeological sites with a local guide.', 95.00, '5 hours', 'images/ancient_sites_tour.jpg'),
+(13, 3, 'Hiking and Trekking in Kosovo', 'Explore Kosovo’s rugged mountains with a professional guide.', 150.00, '8 hours', 'images/hiking_trekking.jpg'),
+(14, 3, 'Nature and Culture Tour', 'Experience Kosovo’s cultural heritage and breathtaking nature.', 100.00, '6 hours', 'images/nature_culture_tour.jpg'),
+(15, 3, 'Monumental Kosovo', 'A guided tour to the monumental and cultural sites of Kosovo.', 110.00, '5 hours', 'images/monumental_kosovo.jpg'),
+(16, 4, 'Kosovo Medieval Tour', 'Travel back in time to the medieval period with this tour of Kosovo.', 115.00, '6 hours', 'images/medieval_tour.jpg'),
 (17, 4, 'Prizren City Tour', 'Visit the historical city of Prizren, Kosovo\'s cultural gem.', 60.00, '4 hours', 'images/prizren_city_tour.jpg'),
-(18, 4, 'Kosovo\'s UNESCO Sites', 'Visit the UNESCO World Heritage Sites in Kosovo.', 130.00, '7 hours', 'images/15.jpg'),
-(19, 4, 'Kosovo Religious Heritage Tour', 'Discover the religious heritage and monuments of Kosovo.', 90.00, '5 hours', '16.jpg'),
-(20, 4, 'Fortress and Castle Tour', 'Explore Kosovo’s medieval fortresses and castles.', 105.00, '6 hours', 'images/17.jpg'),
-(21, 5, 'Eco-Tourism in Kosovo', 'Explore Kosovo’s untouched nature on a hiking and eco-tourism tour.', 130.00, '7 hours', '18.jpg'),
-(22, 5, 'Rural Kosovo Tour', 'Travel through Kosovo’s beautiful rural landscapes and villages.', 95.00, '5 hours', 'images/19.jpg'),
-(23, 5, 'Kosovo Flora and Fauna Tour', 'A guided tour exploring the diverse flora and fauna of Kosovo.', 120.00, '6 hours', 'images/20.jpg'),
-(24, 5, 'Kosovo Countryside Experience', 'Experience the charm of Kosovo’s countryside with a local guide.', 90.00, '4 hours', 'images/21.jpg'),
-(25, 5, 'Kosovo Mountain Adventure', 'Hike Kosovo’s mountains for stunning views and natural beauty.', 140.00, '8 hours', 'images/22.jpg'),
-(26, 6, 'Cultural Tour of Kosovo\'s Villages', 'Discover Kosovo’s villages and their unique culture and lifestyle.', 95.00, '5 hours', 'images/23.jpg'),
-(27, 6, 'Kosovo Culinary Journey', 'A food-focused tour of Kosovo’s traditional dishes and cuisine.', 80.00, '4 hours', 'images/24.jpg'),
-(28, 6, 'Kosovo City Highlights Tour', 'Visit the most important and interesting sites in Kosovo\'s capital city.', 60.00, '3 hours', 'images/25.jpg'),
-(29, 6, 'Kosovo in a Day Tour', 'Explore the best of Kosovo in one day with a guided tour.', 120.00, '6 hours', 'images/1.jpg'),
-(30, 6, 'Kosovo Heritage Tour', 'Visit the most important heritage sites in Kosovo with a professional guide.', 110.00, '5 hours', 'images/2.jpg'),
-(31, 7, 'Mountain Adventure Trek', 'Experience a thrilling adventure in Kosovo’s rugged mountains.', 130.00, '8 hours', 'images/3.jpg'),
-(32, 7, 'Historical Monuments Tour', 'Tour the most significant historical monuments of Kosovo.', 90.00, '5 hours', 'images/4.jpg'),
+(18, 4, 'Kosovo\'s UNESCO Sites', 'Visit the UNESCO World Heritage Sites in Kosovo.', 130.00, '7 hours', 'images/unesco_sites_tour.jpg'),
+(19, 4, 'Kosovo Religious Heritage Tour', 'Discover the religious heritage and monuments of Kosovo.', 90.00, '5 hours', 'images/religious_heritage_tour.jpg'),
+(20, 4, 'Fortress and Castle Tour', 'Explore Kosovo’s medieval fortresses and castles.', 105.00, '6 hours', 'images/fortress_castle_tour.jpg'),
+(21, 5, 'Eco-Tourism in Kosovo', 'Explore Kosovo’s untouched nature on a hiking and eco-tourism tour.', 130.00, '7 hours', 'images/eco_tourism.jpg'),
+(22, 5, 'Rural Kosovo Tour', 'Travel through Kosovo’s beautiful rural landscapes and villages.', 95.00, '5 hours', 'images/rural_kosovo_tour.jpg'),
+(23, 5, 'Kosovo Flora and Fauna Tour', 'A guided tour exploring the diverse flora and fauna of Kosovo.', 120.00, '6 hours', 'images/flora_fauna_tour.jpg'),
+(24, 5, 'Kosovo Countryside Experience', 'Experience the charm of Kosovo’s countryside with a local guide.', 90.00, '4 hours', 'images/countryside_experience.jpg'),
+(25, 5, 'Kosovo Mountain Adventure', 'Hike Kosovo’s mountains for stunning views and natural beauty.', 140.00, '8 hours', 'images/mountain_adventure.jpg'),
+(26, 6, 'Cultural Tour of Kosovo\'s Villages', 'Discover Kosovo’s villages and their unique culture and lifestyle.', 95.00, '5 hours', 'images/villages_cultural_tour.jpg'),
+(27, 6, 'Kosovo Culinary Journey', 'A food-focused tour of Kosovo’s traditional dishes and cuisine.', 80.00, '4 hours', 'images/culinary_journey.jpg'),
+(28, 6, 'Kosovo City Highlights Tour', 'Visit the most important and interesting sites in Kosovo\'s capital city.', 60.00, '3 hours', 'images/city_highlights_tour.jpg'),
+(29, 6, 'Kosovo in a Day Tour', 'Explore the best of Kosovo in one day with a guided tour.', 120.00, '6 hours', 'images/kosovo_in_a_day.jpg'),
+(30, 6, 'Kosovo Heritage Tour', 'Visit the most important heritage sites in Kosovo with a professional guide.', 110.00, '5 hours', 'images/heritage_tour.jpg'),
+(31, 7, 'Mountain Adventure Trek', 'Experience a thrilling adventure in Kosovo’s rugged mountains.', 130.00, '8 hours', 'images/mountain_adventure_trek.jpg'),
+(32, 7, 'Historical Monuments Tour', 'Tour the most significant historical monuments of Kosovo.', 90.00, '5 hours', 'images/historical_monuments_tour.jpg'),
 (33, 7, 'Kosovo City Tour', 'A complete tour of Pristina, the capital of Kosovo.', 55.00, '3 hours', 'images/kosovo_city_tour.jpg'),
-(34, 7, 'Hiking Kosovo Peaks', 'Hike to the peaks of Kosovo’s mountains for breathtaking views.', 120.00, '7 hours', 'images/5.jpg'),
-(35, 7, 'Kosovo Local Life Experience', 'Experience the authentic local life and culture of Kosovo.', 80.00, '4 hours', 'images/6.jpg'),
-(36, 8, 'Archaeological Sites Tour', 'Visit Kosovo’s most famous archaeological sites.', 100.00, '5 hours', 'images/7.jpg'),
-(37, 8, 'Pristina Old Town Tour', 'Walk through the old town of Pristina and explore its history.', 50.00, '3 hours', '8.jpg'),
-(38, 8, 'Kosovo War Memorial Tour', 'Explore Kosovo’s war history through its memorials and museums.', 70.00, '4 hours', 'images/9.jpg'),
-(39, 8, 'Nature Trail Hiking', 'Embark on a hiking trail through Kosovo’s natural wonders.', 110.00, '6 hours', 'images/10.jpg'),
-(40, 8, 'Kosovo UNESCO Heritage', 'Visit the UNESCO World Heritage sites in Kosovo.', 125.00, '7 hours', 'images/11.jpg'),
-(41, 9, 'Kosovo Culture and Heritage Tour', 'Dive into the rich culture and heritage of Kosovo with a local guide.', 100.00, '5 hours', 'images/12.jpg'),
-(42, 9, 'Kosovo Religious Monuments Tour', 'Tour Kosovo’s most important religious monuments and churches.', 95.00, '5 hours', 'images/13.jpg'),
-(43, 9, 'Explore Kosovo \'s Villages', 'Travel to rural villages to experience traditional Kosovar life.', 85.00, '4 hours', 'images/14.jpg'),
-(44, 9, 'Kosovo Historic Sites Tour', 'Visit Kosovo’s historic sites and landmarks.', 110.00, '6 hours', 'images/15.jpg'),
-(45, 9, 'Adventure Trekking Tour', 'Trek through the mountains of Kosovo and experience its beauty.', 140.00, '8 hours', 'images/16.jpg'),
-(46, 10, 'Kosovo Adventure and Nature Tour', 'Explore Kosovo’s adventure activities and natural beauty.', 120.00, '7 hours', 'images/17.jpg'),
-(47, 10, 'Cultural Insights and History', 'Learn about Kosovo’s culture, history, and traditions on this insightful tour.', 100.00, '6 hours', 'images/18.jpg'),
-(48, 10, 'Kosovo’s Hidden Gems', 'Discover Kosovo’s hidden gems, off-the-beaten-path destinations.', 110.00, '5 hours', 'images/19.jpg'),
-(49, 10, 'Kosovo City Exploration Tour', 'Explore the city of Pristina and its landmarks.', 60.00, '3 hours', 'images/20.jpg'),
-(50, 10, 'Rural Kosovo Trekking', 'Trek through the rural areas of Kosovo and enjoy the serene landscapes.', 130.00, '7 hours', '21.jpg');
+(34, 7, 'Hiking Kosovo Peaks', 'Hike to the peaks of Kosovo’s mountains for breathtaking views.', 120.00, '7 hours', 'images/hiking_peaks_tour.jpg'),
+(35, 7, 'Kosovo Local Life Experience', 'Experience the authentic local life and culture of Kosovo.', 80.00, '4 hours', 'images/local_life_experience.jpg'),
+(36, 8, 'Archaeological Sites Tour', 'Visit Kosovo’s most famous archaeological sites.', 100.00, '5 hours', 'images/archaeological_sites_tour.jpg'),
+(37, 8, 'Pristina Old Town Tour', 'Walk through the old town of Pristina and explore its history.', 50.00, '3 hours', 'images/pristina_old_town.jpg'),
+(38, 8, 'Kosovo War Memorial Tour', 'Explore Kosovo’s war history through its memorials and museums.', 70.00, '4 hours', 'images/war_memorial_tour.jpg'),
+(39, 8, 'Nature Trail Hiking', 'Embark on a hiking trail through Kosovo’s natural wonders.', 110.00, '6 hours', 'images/nature_trail_hiking.jpg'),
+(40, 8, 'Kosovo UNESCO Heritage', 'Visit the UNESCO World Heritage sites in Kosovo.', 125.00, '7 hours', 'images/unesco_heritage_tour.jpg'),
+(41, 9, 'Kosovo Culture and Heritage Tour', 'Dive into the rich culture and heritage of Kosovo with a local guide.', 100.00, '5 hours', 'images/culture_heritage_tour.jpg'),
+(42, 9, 'Kosovo Religious Monuments Tour', 'Tour Kosovo’s most important religious monuments and churches.', 95.00, '5 hours', 'images/religious_monuments_tour.jpg'),
+(43, 9, 'Explore Kosovo\'s Villages', 'Travel to rural villages to experience traditional Kosovar life.', 85.00, '4 hours', 'images/villages_experience.jpg'),
+(44, 9, 'Kosovo Historic Sites Tour', 'Visit Kosovo’s historic sites and landmarks.', 110.00, '6 hours', 'images/historic_sites_tour.jpg'),
+(45, 9, 'Adventure Trekking Tour', 'Trek through the mountains of Kosovo and experience its beauty.', 140.00, '8 hours', 'images/adventure_trekking_tour.jpg'),
+(46, 10, 'Kosovo Adventure and Nature Tour', 'Explore Kosovo’s adventure activities and natural beauty.', 120.00, '7 hours', 'images/adventure_nature_tour.jpg'),
+(47, 10, 'Cultural Insights and History', 'Learn about Kosovo’s culture, history, and traditions on this insightful tour.', 100.00, '6 hours', 'images/cultural_insights_history.jpg'),
+(48, 10, 'Kosovo’s Hidden Gems', 'Discover Kosovo’s hidden gems, off-the-beaten-path destinations.', 110.00, '5 hours', 'images/hidden_gems_tour.jpg'),
+(49, 10, 'Kosovo City Exploration Tour', 'Explore the city of Pristina and its landmarks.', 60.00, '3 hours', 'images/city_exploration_tour.jpg'),
+(50, 10, 'Rural Kosovo Trekking', 'Trek through the rural areas of Kosovo and enjoy the serene landscapes.', 130.00, '7 hours', 'images/rural_trekking_tour.jpg');
 
 -- --------------------------------------------------------
 
@@ -236,8 +256,37 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`, `created_at`) VALUES
+(1, 'Areta', '$2y$10$nLchv0tqj1CtN9MdTM3ITOSY/J5a.W.xxln/wKoQ1UuDHHup3mCmK', 'user', 'aretabunjaku@gmail.com', '2025-02-02 20:54:42'),
+(3, 'Leta', '$2y$10$S2YrYYm5caRvX6SzoL44Meg6.UB1lBCUZc3eJTdQ9WWjfQmeikWK2', 'user', 'aretabunjaku@gmail.com', '2025-02-11 17:49:04'),
+(11, 'Aurela', '', 'user', 'lela1212@gmail.com', '2025-02-12 05:29:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_activity_logs`
+--
+
+CREATE TABLE `user_activity_logs` (
+  `activity_id` int(11) NOT NULL,
+  `admin_id` int(11) NOT NULL,
+  `action` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `contact_us`
@@ -284,8 +333,20 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `user_activity_logs`
+--
+ALTER TABLE `user_activity_logs`
+  ADD PRIMARY KEY (`activity_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
@@ -327,7 +388,13 @@ ALTER TABLE `tour_packages`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `user_activity_logs`
+--
+ALTER TABLE `user_activity_logs`
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
