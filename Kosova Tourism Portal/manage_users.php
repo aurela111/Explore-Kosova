@@ -42,6 +42,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
             padding: 0;
         }
 
+        /* Header Section (Navigation Bar) */
+        header {
+            background-color: #1e3d58;
+            padding: 1rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links li {
+            display: inline-block;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f5a623;
+        }
+
         .container {
             max-width: 1000px;
             margin: 2rem auto;
@@ -105,6 +144,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
 </head>
 <body>
 
+    <header>
+        <nav class="navbar">
+            <div class="logo">Explore Kosova</div>
+            <ul class="nav-links">
+                <li><a href="admin_dashboard.php">Dashboard</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <h1>Manage Users</h1>
 
@@ -145,7 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
                 </tr>
             </thead>
             <tbody>
-            <?php while ($row = $result->fetch_assoc()) { ?>
+                <?php while ($row = $result->fetch_assoc()) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['username']; ?></td>
@@ -157,8 +206,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
                         </td>
                     </tr>
                 <?php } ?>
-
-
             </tbody>
         </table>
     </div>
