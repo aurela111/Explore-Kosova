@@ -12,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("ssss", $name, $email, $phone, $message);
 
     if ($stmt->execute()) {
-        echo "Message sent successfully!";
-    } else {
+        echo "<script>alert('Message sent successfully!'); window.location.href='contactus.html';</script>";
+    }
+     else {
         echo "Error: " . $stmt->error;
     }
 }

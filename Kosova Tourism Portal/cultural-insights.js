@@ -1,4 +1,4 @@
-// JSON Data for Cultural Insights
+
 const culturalInsightsData = {
   culturalInsights: {
     heading: "Cultural Insights",
@@ -39,19 +39,18 @@ const culturalInsightsData = {
   },
 };
 
-// Function to Render Cultural Insights Section
 function renderCulturalInsights(data) {
   const section = document.querySelector(".container");
 
-  // Add heading
+  
   let content = `<h2>${data.culturalInsights.heading}</h2>`;
 
-  // Add paragraphs
+  
   data.culturalInsights.paragraphs.forEach((paragraph) => {
     content += `<p>${paragraph}</p>`;
   });
 
-  // Add images with captions
+  
   data.culturalInsights.images.forEach((image) => {
     content += `
         <div class="culture-image">
@@ -61,11 +60,11 @@ function renderCulturalInsights(data) {
       `;
   });
 
-  // Update the section content
+  
   section.innerHTML = content;
 }
 
-// Render the section
+
 window.onload = function () {
   renderCulturalInsights(culturalInsightsData);
 };

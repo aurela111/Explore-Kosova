@@ -15,9 +15,8 @@ function showSlides() {
 
   slides[slideIndex - 1].style.display = "flex";
 
-  setTimeout(showSlides, 10000); // Change image every 15 seconds
+  setTimeout(showSlides, 10000); 
 }
-
 // Manual Slide Navigation
 function changeSlide(n) {
   slideIndex += n - 1;

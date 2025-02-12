@@ -1,10 +1,15 @@
-<?php include 'readmoreNews.php'; ?>
+<?php
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+    die("Invalid news ID.");
+}
+include 'readmoreNews.php'; // Fetch the correct news article
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($news['title']); ?> - Explore Kosova</title>
+    <title><?php echo htmlspecialchars($news['title'] ?? 'News Not Found'); ?> - Explore Kosova</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,9 +29,14 @@
 
     <main>
         <article class="content">
-            <h1><?php echo htmlspecialchars($news['title']); ?></h1>
-            <img src="<?php echo htmlspecialchars($news['image_url']); ?>" alt="News Image" class="featured-image">
-            <p><?php echo nl2br(htmlspecialchars($news['content'])); ?></p>
+            <?php if (!empty($news)): ?>
+                <h1><?php echo htmlspecialchars($news['title']); ?></h1>
+                <img src="<?php echo htmlspecialchars($news['image_url']); ?>" alt="News Image" class="featured-image">
+                <p><?php echo nl2br(htmlspecialchars($news['content'])); ?></p>
+            <?php else: ?>
+                <h1>News Not Found</h1>
+                <p>Sorry, the requested news article does not exist.</p>
+            <?php endif; ?>
         </article>
     </main>
 

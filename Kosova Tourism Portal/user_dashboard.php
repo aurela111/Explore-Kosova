@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.html"); 
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
             <div class="logo">Explore Kosova</div>
             <ul class="nav-links">
                 <li><a href="Homepage.html">Home</a></li>
-                <li><a href="login.html" class="logout-btn">Logout</a></li>
+                <li><a href="logout.php" class="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -21,20 +28,21 @@
     <!-- User Dashboard Section -->
     <section class="dashboard">
         <div class="container">
-            <h1>Welcome, <span class="username">User</span>!</h1>
+        <h1>Welcome, <span class="username"><?php echo htmlspecialchars($_SESSION['username']); ?></span>!</h1>
             <p>Choose an action to get started:</p>
 
             <div class="user-actions">
-                <a href="explore_destinations.php"><button class="btn">Explore Destinations</button></a>
-                <a href="news.php"><button class="btn">View News</button></a>
-                <a href="contactus.php"><button class="btn">Contact Support</button></a>
+            <a href="./explore_destinations.php"><button class="btn">Explore Destinations</button></a>
+            <a href="./news.html"><button class="btn">View News</button></a> 
+            <a href="./contactus.html"><button class="btn">Contact Support</button></a>
+
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search destinations, news, or support...">
-                <button class="search-btn">Search</button>
-            </div>
-            
+            <form action="search.php" method="GET" class="search-bar">
+            <input type="text" name="query" id="searchInput" placeholder="Search for destinations, tours, or guides...">
+            <button type="submit" class="search-btn">Search</button>
+            </form>
+
 
         </div>
     </section>

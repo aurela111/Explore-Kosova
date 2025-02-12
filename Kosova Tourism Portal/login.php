@@ -3,47 +3,68 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include database connection
-include 'C:\xampp\htdocs\Projektiii\Explore-Kosova\Kosova Tourism Portal\databaseconnection.php';
+include 'databaseconnection.php'; 
 
-// Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get form data
+    
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
-    // Query the database to get the user
-    $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    // Check the users table first (for normal users)
+    $sql_user = "SELECT * FROM users WHERE email = ?";
+    $stmt_user = $conn->prepare($sql_user);
+    $stmt_user->bind_param("s", $email);
+    $stmt_user->execute();
+    $result_user = $stmt_user->get_result();
 
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
+    // If the user exists in the users table
+    if ($result_user->num_rows > 0) {
+        $user = $result_user->fetch_assoc();
 
-        // Verify the password
+        // Verify password for user
         if (password_verify($password, $user['password'])) {
-            // Set session variables for user
+            
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['role'] = $user['role'];
+            $_SESSION['role'] = 'user';  // Set role to 'user'
 
-            // Redirect based on role
-            if ($user['role'] == 'admin') {
+            header("Location: user_dashboard.php");
+            exit();
+        } else {
+            echo "<script>alert('Invalid password for user!'); window.location.href='login.html';</script>";
+        }
+    } 
+    // Check the admins table if not found in users table
+    else {
+        $sql_admin = "SELECT * FROM admins WHERE email = ?";
+        $stmt_admin = $conn->prepare($sql_admin);
+        $stmt_admin->bind_param("s", $email);
+        $stmt_admin->execute();
+        $result_admin = $stmt_admin->get_result();
+
+        // If the admin exists in the admins table
+        if ($result_admin->num_rows > 0) {
+            $admin = $result_admin->fetch_assoc();
+
+            // Verify password for admin
+            if (password_verify($password, $admin['password'])) {
+                
+                $_SESSION['admin_id'] = $admin['id'];
+                $_SESSION['username'] = $admin['username'];
+                $_SESSION['role'] = 'admin';  // Set role to 'admin'
+
                 header("Location: admin_dashboard.php");
+                exit();
             } else {
-                header("Location: user_dashboard.php");
+                echo "<script>alert('Invalid password for admin!'); window.location.href='login.html';</script>";
             }
         } else {
-            echo "Invalid password.";
+            echo "<script>alert('No user or admin found with that email!'); window.location.href='login.html';</script>";
         }
-    } else {
-        echo "No user found with that email.";
     }
 
-    // Close the statement and connection
-    $stmt->close();
+    $stmt_user->close();
+    $stmt_admin->close();
     $conn->close();
 }
 ?>

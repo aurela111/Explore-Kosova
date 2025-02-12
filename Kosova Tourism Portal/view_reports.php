@@ -1,18 +1,14 @@
 <?php
 session_start();
-
-// Check if user is an admin
 if ($_SESSION['role'] !== 'admin') {
     header('Location: login.php');
     exit;
 }
 
-include 'databaseconnection.php'; // Include your database connection file
+include 'databaseconnection.php';
 
-// Example query for reports (You can modify as needed)
-$sql = "SELECT * FROM user_activity_logs"; // Assuming you have a logs table
+$sql = "SELECT * FROM user_activity_logs";
 $result = $conn->query($sql);
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +37,7 @@ $result = $conn->query($sql);
                 <thead>
                     <tr>
                         <th>Activity ID</th>
-                        <th>User ID</th>
+                        <th>Admin ID</th>
                         <th>Action</th>
                         <th>Date</th>
                     </tr>
@@ -50,7 +46,7 @@ $result = $conn->query($sql);
                     <?php while ($row = $result->fetch_assoc()) { ?>
                         <tr>
                             <td><?php echo $row['activity_id']; ?></td>
-                            <td><?php echo $row['user_id']; ?></td>
+                            <td><?php echo $row['admin_id']; ?></td>
                             <td><?php echo $row['action']; ?></td>
                             <td><?php echo $row['date']; ?></td>
                         </tr>

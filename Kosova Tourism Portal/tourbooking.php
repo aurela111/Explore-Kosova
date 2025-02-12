@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO bookings (user_id, package_id) VALUES ('$user_id', '$package_id')";
     if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Booking successful!'); window.location.href='userdashboard.html';</script>";
+        echo "<script>alert('Booking successful!'); window.location.href='user_dashboard.php';</script>";
     } else {
         echo "<script>alert('Error booking tour.'); window.location.href='tour_packages.php';</script>";
     }
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
             <h2>Confirm Your Booking</h2>
             <form method="POST" action="book_tour.php">
-                <input type="hidden" name="user_id" value="1"> <!-- Get this dynamically after login -->
+                <input type="hidden" name="user_id" value="1"> 
                 <input type="hidden" name="package_id" value="<?php echo $_GET['package_id']; ?>">
                 <button type="submit" class="btn">Confirm Booking</button>
             </form>

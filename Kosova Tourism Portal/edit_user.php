@@ -1,11 +1,12 @@
 <?php
 session_start();
-include 'databaseconnection.php';
-
-if ($_SESSION['role'] !== 'admin') {
-    header('Location: login.php');
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header('Location: login.html');
     exit;
 }
+
+include 'databaseconnection.php';
+
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

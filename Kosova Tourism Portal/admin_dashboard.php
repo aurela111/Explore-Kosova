@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: login.php');  // Redirect to login if not logged in
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +30,7 @@
 
     <section class="dashboard">
         <div class="container">
-            <h1>Welcome, Admin!</h1>
+            <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
             <p>This is the admin dashboard where you can manage users, content, and system settings.</p>
 
             <div class="admin-actions">

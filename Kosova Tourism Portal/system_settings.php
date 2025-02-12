@@ -1,15 +1,13 @@
 <?php
 session_start();
-
-// Check if user is an admin
-if ($_SESSION['role'] !== 'admin') {
-    header('Location: login.php');
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header('Location: login.html');
     exit;
 }
 
-include 'databaseconnection.php'; // Include your database connection file
 
-// Example query to get system settings
+include 'databaseconnection.php'; 
+
 $sql = "SELECT * FROM system_settings WHERE id = 1";
 $result = $conn->query($sql);
 $settings = $result->fetch_assoc();

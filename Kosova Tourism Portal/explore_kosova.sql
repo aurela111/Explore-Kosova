@@ -58,16 +58,16 @@ CREATE TABLE `destinations` (
 --
 
 INSERT INTO `destinations` (`id`, `name`, `description`, `image_url`, `location`, `opening_hours`, `contact_info`, `price`) VALUES
-(1, 'Gjakova', 'Gjakova is known for its traditional houses, and the Old Bazaar, a rich historical site.', 'gjakova.jpg', 'Gjakova, Kosovo', '09:00 - 18:00', 'info@gjakova.com', 50.00),
-(2, 'Prizren', 'Prizren is a city with many medieval monuments and an Ottoman heritage.', 'prizren.jpg', 'Prizren, Kosovo', '09:00 - 19:00', 'info@prizren.com', 60.00),
-(3, 'Pristina', 'Pristina, the capital city, is a vibrant mix of modern culture and history.', 'pristina.jpg', 'Pristina, Kosovo', '08:00 - 22:00', 'info@pristina.com', 70.00),
-(4, 'Peja', 'Peja is famous for its picturesque surroundings and the Patriarchate of Peć.', 'peja.jpg', 'Peja, Kosovo', '09:00 - 20:00', 'info@peja.com', 65.00),
-(5, 'Mitrovica', 'Mitrovica is a historical city, rich in culture, with a divided history between North and South.', 'mitrovica.jpg', 'Mitrovica, Kosovo', '10:00 - 18:00', 'info@mitrovica.com', 55.00),
+(1, 'Gjakova', 'Gjakova is known for its traditional houses, and the Old Bazaar, a rich historical site.', 'images/gjakova.jpg', 'Gjakova, Kosovo', '09:00 - 18:00', 'info@gjakova.com', 50.00),
+(2, 'Prizren', 'Prizren is a city with many medieval monuments and an Ottoman heritage.', 'images/prizren.jpg', 'Prizren, Kosovo', '09:00 - 19:00', 'info@prizren.com', 60.00),
+(3, 'Pristina', 'Pristina, the capital city, is a vibrant mix of modern culture and history.', 'images/prishtina.jpg', 'Pristina, Kosovo', '08:00 - 22:00', 'info@pristina.com', 70.00),
+(4, 'Peja', 'Peja is famous for its picturesque surroundings and the Patriarchate of Peć.', 'images/peja.jpg', 'Peja, Kosovo', '09:00 - 20:00', 'info@peja.com', 65.00),
+(5, 'Mitrovica', 'Mitrovica is a historical city, rich in culture, with a divided history between North and South.', 'images/mitrovica.jpg', 'Mitrovica, Kosovo', '10:00 - 18:00', 'info@mitrovica.com', 55.00),
 (6, 'Rugova Canyon', 'A scenic natural landmark, known for its breathtaking landscapes.', 'rugova.jpg', 'Rugova Canyon, Kosovo', 'All Day', 'info@rugova.com', 40.00),
 (7, 'Kosovo Museum', 'A museum showcasing the history and culture of Kosovo.', 'kosovomuseum.jpg', 'Pristina, Kosovo', '09:00 - 18:00', 'info@kosovomuseum.com', 30.00),
 (8, 'Brezovica Ski Resort', 'A popular ski resort for winter sports lovers.', 'brezovica.jpg', 'Brezovica, Kosovo', '08:00 - 17:00', 'info@brezovica.com', 80.00),
 (9, 'Mirusha Waterfalls', 'A natural wonder, these waterfalls are one of Kosovo’s best-kept secrets.', 'mirusha.jpg', 'Mirusha, Kosovo', 'All Day', 'info@mirusha.com', 50.00),
-(10, 'Germia Park', 'A large park with a pool, walking trails, and beautiful views of Pristina.', 'germia.jpg', 'Pristina, Kosovo', '06:00 - 20:00', 'info@germia.com', 25.00),
+(10, 'Germia Park', 'A large park with a pool, walking trails, and beautiful views of Pristina.', 'images/germia.jpg', 'Pristina, Kosovo', '06:00 - 20:00', 'info@germia.com', 25.00),
 (11, 'Visoki Decani', 'A UNESCO World Heritage site, home to a Serbian Orthodox monastery.', 'decani.jpg', 'Deçan, Kosovo', '08:00 - 16:00', 'info@decani.com', 45.00),
 (12, 'Kosovo Polje', 'A historic site, the battlefield of Kosovo, where the famous 1389 battle occurred.', 'kosovopolje.jpg', 'Kosovo Polje, Kosovo', '08:00 - 17:00', 'info@kosovopolje.com', 35.00),
 (13, 'Sharr Mountains National Park', 'A UNESCO-listed park with amazing biodiversity.', 'sharr.jpg', 'Sharr Mountains, Kosovo', '09:00 - 20:00', 'info@sharr.com', 75.00),
@@ -78,7 +78,7 @@ INSERT INTO `destinations` (`id`, `name`, `description`, `image_url`, `location`
 (18, 'Drenica Valley', 'A scenic valley filled with history, nature, and rural charm.', 'drenica.jpg', 'Drenica, Kosovo', '09:00 - 20:00', 'info@drenica.com', 50.00),
 (19, 'Sinan Pasha Mosque', 'A historical mosque in Prizren with architectural significance.', 'sinanpasha.jpg', 'Prizren, Kosovo', '09:00 - 17:00', 'info@sinanpasha.com', 40.00),
 (20, 'Vushtrri', 'A town with a rich Ottoman heritage, located near Pristina.', 'vushtrri.jpg', 'Vushtrri, Kosovo', '08:00 - 18:00', 'info@vushtrri.com', 30.00),
-(21, 'Newborn Monument', 'A symbol of Kosovo’s independence, located in Pristina.', 'newborn.jpg', 'Pristina, Kosovo', 'All Day', 'info@newborn.com', 20.00);
+(21, 'Newborn Monument', 'A symbol of Kosovo’s independence, located in Pristina.', 'images/newborn.jpg', 'Pristina, Kosovo', 'All Day', 'info@newborn.com', 20.00);
 
 -- --------------------------------------------------------
 
