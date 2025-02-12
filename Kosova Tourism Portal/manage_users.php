@@ -10,16 +10,16 @@ include 'databaseconnection.php';
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
-// Add User logic
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $role = $_POST['role'];
 
-    // Insert new user into database
+    
     $sql_add_user = "INSERT INTO users (username, email, role) VALUES ('$username', '$email', '$role')";
     if ($conn->query($sql_add_user) === TRUE) {
-        header('Location: manage_users.php'); // Refresh the page after adding user
+        header('Location: manage_users.php'); 
         exit;
     } else {
         echo "Error: " . $sql_add_user . "<br>" . $conn->error;
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Users</title>
     <style>
-        /* Minimal inline CSS for testing */
+       
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
             padding: 0;
         }
 
-        /* Header Section (Navigation Bar) */
+        
         header {
             background-color: #1e3d58;
             padding: 1rem;
